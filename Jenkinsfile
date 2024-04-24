@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         dockerHubCredentialsID	    = 'DockerHub'  		    			// DockerHub credentials ID.
-        imageName   		    = 'osayman74/nti-app'     			// DockerHub repo/image name.
+        imageName   		    = 'osayman74/java-app'     			// DockerHub repo/image name.
     }
     
     stages {       
