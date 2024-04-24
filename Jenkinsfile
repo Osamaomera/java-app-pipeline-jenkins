@@ -12,6 +12,7 @@ pipeline {
             steps {
                 script {
                 	echo "Running Unit Test..."
+			sh 'brew install dos2unix'
 			sh 'sudo chmod 744 gradlew'
 			sh './gradlew clean test'
         	}
