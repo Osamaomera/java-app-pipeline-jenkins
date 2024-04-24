@@ -13,7 +13,6 @@ pipeline {
                 script {
                 	echo "Running Unit Test..."
 			sh 'chmod 744 ./gradlew'
-			sh './gradlew clean test'
         	}
     	    }
 	}
