@@ -79,16 +79,13 @@ post {
     }
 ```
 ----
-### - Successfully the image built.
-![]()
-
 ### - Successfully the image pushed to repo of DockerHub.
-![]()
+![](image-pushed.png)
 
 ### - Successfully run the pipeline
-![]()
+![](pipeline-success.png)
 
 #####################################################
-![]()
+![](stack-view-pipeline.png)
 ---
 
