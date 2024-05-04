@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         dockerHubCredentialsID	    = 'DockerHub'  		    			// DockerHub credentials ID.
-        imageName   		    = 'osayman74/java-app'     			// DockerHub repo/image name.
+        imageName   		    = 'ibrahimadel10/nti-app'     			// DockerHub repo/image name.
     }
     
     stages {       
@@ -12,8 +12,8 @@ pipeline {
             steps {
                 script {
                 	echo "Running Unit Test..."
-			sh 'chmod 744 ./gradlew'
-			// sh './gradlew clean test'
+			sh 'chmod 744 gradlew'
+			sh './gradlew clean test'
         	}
     	    }
 	}
@@ -37,6 +37,14 @@ pipeline {
 				sh "docker login -u ${USERNAME} -p ${PASSWORD}"
         		}
 			sh "docker push ${imageName}:${BUILD_NUMBER}"
+                }
+            }
+        }
+	    
+	stage('Deploy on k8s cluster') {
+            steps {
+                script {
+        		echo "deploy on k8s ..."
                 }
             }
         }
